@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![OpenGamma](http://developers.opengamma.com/res/display/default/chrome/masthead_logo.png "OpenGamma")](http://www.opengamma.com)
 
 **Please note that this project has been discontinued and is no longer under active development.**
@@ -61,3 +62,7 @@ Importing the projects into Eclipse requires following a very specific set of
 instructions to work properly.
 Full details are in the README of the eclipse subdirectory.
 
+=======
+# OG-Platform-master
+The latest code of OG-Platform-master
+>>>>>>> 3787d77f0367512e353e5fd6d4c63a20efa26908
