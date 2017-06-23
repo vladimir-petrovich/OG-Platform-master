@@ -1,0 +1,130 @@
+/*
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+.ui-dialog {
+  -webkit-box-shadow: 0 0 50px -10px #555;
+  -moz-box-shadow: 0 0 50px -10px #555;
+  box-shadow: 0 0 50px -10px #555;
+  padding: 0;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog-titlebar {
+  -webkit-border-top-left-radius: 1px;
+  -webkit-border-top-right-radius: 1px;
+  -moz-border-radius-topleft: 1px;
+  -moz-border-radius-topright: 1px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: default;
+  font-family: 'Open Sans', arial, serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.ui-dialog-titlebar:before {
+  -webkit-border-radius: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  -moz-border-radius: 1px;
+  -moz-border-radius-bottomright: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  background: #fff;
+  bottom: 50%;
+  content: '';
+  left: 1px;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.ie8 .ui-dialog-titlebar:before {
+  background: transparent;
+}
+
+.ui-dialog .ui-dialog-content {
+  color: #555;
+  margin: 10px 0 15px 0;
+  padding: 0 10px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 8px 10px 8px 20px;
+}
+
+.ui-dialog .ui-dialog-content > div {
+  margin-bottom: 10px;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+ float: none;
+ margin: 0 0 0 6px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  padding: 3px 5px;
+}
+
+.ui-dialog-content label {
+  display: block;
+}
+
+.ui-dialog-content label,
+.ui-dialog-content input[type='text'],
+.ui-dialog-content select,
+.ui-dialog-content textarea {
+  width: 96%;
+}
+
+.ui-widget-content {
+  background: #fff;
+}
+
+.og-js-dialog-input-container .ui-dialog-titlebar {
+  background-color: #7be468;
+}
+
+.og-js-dialog-input-container .ui-dialog-title:after {
+  border-radius: 1px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+  background: url('/prototype/images/common/sprites/main-sprite-sheet.png');
+  background-position: -10px -25px;
+  content: "";
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  margin-top: -5px;
+}
+
+.og-js-dialog-confirm-container .ui-dialog-titlebar {
+  background-color: #da5151;
+}
+
+.og-js-dialog-confirm-container .ui-dialog-title:after {
+  border-radius: 1px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+  background: url('/prototype/images/common/sprites/main-sprite-sheet.png');
+  background-position: -20px -23px;
+  content: "";
+  height: 10px;
+  width: 9px;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  margin-top: -5px;
+}

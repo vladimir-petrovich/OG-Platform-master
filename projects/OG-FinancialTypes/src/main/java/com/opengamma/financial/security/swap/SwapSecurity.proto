@@ -1,0 +1,23 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * 
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.swap {
+
+  /**
+   * A swap security.
+   */
+  message SwapSecurity extends FinancialSecurity {
+    required string securityType [default = "SWAP"];
+    
+    required javax.time.calendar.ZonedDateTime tradeDate;
+    required javax.time.calendar.ZonedDateTime effectiveDate;
+    required javax.time.calendar.ZonedDateTime maturityDate;
+    required string counterparty;
+    required SwapLeg payLeg;
+    required SwapLeg receiveLeg;
+  }
+
+}

@@ -1,0 +1,23 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.equity {
+
+  /**
+   * An equity security.
+   */
+  message EquitySecurity extends FinancialSecurity {
+    required string securityType [default = "EQUITY"];
+    
+    optional string shortName;
+    required string exchange;
+    required string exchangeCode;
+    required string companyName;
+    required com.opengamma.util.money.Currency currency;
+    optional GICSCode gicsCode;
+  }
+
+}

@@ -1,0 +1,80 @@
+/*
+ * Copyright 2012 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+.OG-cell-options {
+    background-color: transparent;
+    height: 20px;
+    position: absolute;
+    width: 32px;
+    padding-right: 1px;
+    z-index: 3;
+}
+
+.OG-cell-options.og-frozen {
+    z-index: 5;
+}
+
+.OG-cell-options .OG-icon.og-icon-down-chevron {
+    float: left;
+}
+
+.OG-cell-options .OG-icon.og-icon-down-chevron {
+    background: #fff;
+    border: 1px solid #dadcdd;
+    cursor: pointer;
+}
+
+.OG-cell-options .OG-icon.og-icon-down-chevron::after {
+    top: 7px;
+    left: -4px;
+}
+
+.OG-cell-options .OG-icon.og-complex::after {
+    top: 2px;
+    left: -5px;
+}
+
+.OG-cell-options .og-group {
+    position: relative;
+}
+
+.OG-icon.og-icon-down-chevron:hover {
+    border-color: #01467a!important;
+}
+
+.OG-cell-options .og-cell-border {
+    position: absolute;
+    height: 0;
+    right: 32px;
+    display: none;
+}
+
+.OG-cell-options .og-cell-border-top {
+    border-top: 1px solid #01467a;
+    height: 0;
+}
+
+.OG-cell-options .og-cell-border-bottom {
+    border-bottom: 1px solid #01467a;
+    height: 0;
+    bottom: -2px;
+}
+
+.OG-cell-options.og-frozen .og-cell-border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.OG-cell-options.og-frozen.og-pop-up .og-cell-border-bottom {
+    border-bottom: 1px solid #01467a;
+}
+
+.OG-cell-options.og-frozen.og-pop-up .og-cell-border-top {
+    border-top: 1px solid #eee;
+}
+
+.OG-cell-options .og-cell-border-left {
+    border-left: 1px solid #01467a;
+    height: 22px;
+    width: 1px;
+}

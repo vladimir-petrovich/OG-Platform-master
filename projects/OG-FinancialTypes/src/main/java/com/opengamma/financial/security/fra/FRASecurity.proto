@@ -1,0 +1,25 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.fra {
+
+  /**
+   * A FRA security.
+   */
+  message FRASecurity extends FinancialSecurity {
+    required string securityType [default = "FRA"];
+    
+    required com.opengamma.util.money.Currency currency;
+    required id.ExternalId region;
+    required javax.time.calendar.ZonedDateTime startDate;
+    required javax.time.calendar.ZonedDateTime endDate;
+    required double rate;
+    required double amount;
+    required id.ExternalId underlyingIdentifier;
+    required javax.time.calendar.ZonedDateTime fixingDate;
+  }
+
+}

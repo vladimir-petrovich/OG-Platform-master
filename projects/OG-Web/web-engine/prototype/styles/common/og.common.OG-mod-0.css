@@ -1,0 +1,32 @@
+/*
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+
+.OG-mod-0 h3 {
+  border-bottom: 4px solid #F3F3F3;
+  margin-bottom: 1px;
+  margin-right: 10px;
+}
+
+.OG-mod-0 h3 span {
+  vertical-align: middle;
+  background-color: #F3F3F3;
+  border-left: 2px solid #C6C6C6;
+  padding: 5px 10px 5px 8px;
+  display: inline-block;
+  position: relative;
+  bottom: -4px;
+}
+
+
+.OG-mod-0 .og-mod-content {
+  background-color: #ecf5fa;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.OG-mod-0 .og-mod-content label {
+  margin-bottom: 5px;
+  display: block;
+}

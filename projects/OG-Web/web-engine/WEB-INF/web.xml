@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+  <!-- Jersey - JAXRS support -->
+  <servlet>
+    <servlet-name>jersey-spring</servlet-name>
+    <servlet-class>com.opengamma.component.rest.OpenGammaServlet</servlet-class>
+    <!--for creating subscriptions to entity updates-->
+    <init-param>
+      <param-name>com.sun.jersey.spi.container.ResourceFilters</param-name>
+      <param-value>com.opengamma.web.analytics.rest.SubscribingFilterFactory</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jersey-spring</servlet-name>
+    <url-pattern>/jax/*</url-pattern>
+  </servlet-mapping>
+
+  <!--HTTP push support-->
+  <servlet>
+    <servlet-name>handshake</servlet-name>
+    <servlet-class>com.opengamma.web.analytics.push.HandshakeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>handshake</servlet-name>
+    <url-pattern>/handshake</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updates</servlet-name>
+    <servlet-class>com.opengamma.web.analytics.push.LongPollingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updates</servlet-name>
+    <url-pattern>/updates/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Jolokia - jmx bridge -->
+  <servlet>
+    <servlet-name>jolokia-agent</servlet-name>
+    <servlet-class>org.jolokia.http.AgentServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jolokia-agent</servlet-name>
+    <url-pattern>/admin/jolokia/*</url-pattern>
+  </servlet-mapping>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Admin Access</web-resource-name>
+      <url-pattern>/admin/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-role>
+    <role-name>admin</role-name>
+  </security-role>
+
+  <!-- Ehcache shutdown hook -->
+  <listener>
+    <listener-class>net.sf.ehcache.constructs.web.ShutdownListener</listener-class>
+  </listener>
+  
+  <!-- Disable Jetty's locking of static files -->
+  <servlet>
+    <servlet-name>default</servlet-name>
+    <init-param>
+      <param-name>useFileMappedBuffer</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </servlet>
+
+  <!-- Session timeout -->
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
+
+  <!-- Apache Shiro auth -->
+  <listener>
+    <listener-class>com.opengamma.web.ShiroSecurityEnvironmentLoader</listener-class>
+  </listener>
+  <filter>
+    <filter-name>ShiroFilter</filter-name>
+    <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ShiroFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+  </filter-mapping>
+  <context-param>
+    <param-name>shiroConfigLocations</param-name>
+    <param-value>/WEB-INF/shiro.ini</param-value>
+  </context-param>
+
+</web-app>

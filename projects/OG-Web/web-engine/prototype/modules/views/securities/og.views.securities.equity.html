@@ -1,0 +1,35 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <col style="width: 40%" />
+          <col style="width: 60%" />
+          <thead>
+            <tr>
+              <th><span><em>${securityType}</em></span></th><th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span>Company Name</span></td><td>${companyName}</td></tr>
+            <tr>
+              <td><span>Short Name</span></td>
+              <td>{{if shortName}}${shortName}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr><td><span>Exchange</span></td><td>${exchange}</td></tr>
+            <tr><td><span>Currency</span></td><td>${currency}</td></tr>
+            <tr><td><span>Exchange Code</span></td><td>${exchangeCode}</td></tr>
+            <tr>
+              <td><span>GICS code</span></td>
+              <td>{{if gicsCode}}${gicsCode}{{else}}(no value){{/if}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      ${attributes}
+    </div>
+  </section>
+</article>

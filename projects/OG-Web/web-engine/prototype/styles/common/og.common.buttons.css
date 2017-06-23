@@ -1,0 +1,39 @@
+/*
+ * Common button styles
+ *
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+
+/* Default button */
+
+    button {
+        border-color: #ccc #999 #999 #ccc!important;
+        border-style: solid!important;
+        border-width: 1px!important;
+        color: #555;
+        cursor: pointer;
+        padding: 4px 8px;
+        vertical-align: middle;
+        background: #f3f3f3!important; /* Old browsers */
+        background: -moz-linear-gradient(top, #f3f3f3 0%, #f3f3f3 50%, #ebebeb 52%, #f3f3f3 100%)!important; /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(50%,#f3f3f3), color-stop(52%,#ebebeb), color-stop(100%,#f3f3f3))!important; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #f3f3f3 0%,#f3f3f3 50%,#ebebeb 52%,#f3f3f3 100%)!important; /* Chrome10+,Safari5.1+ */
+        background: -ms-linear-gradient(top, #f3f3f3 0%,#f3f3f3 50%,#ebebeb 52%,#f3f3f3 100%)!important; /* IE10+ */
+        background: linear-gradient(top, #f3f3f3 0%,#f3f3f3 50%,#ebebeb 52%,#f3f3f3 100%)!important; /* W3C */
+    }
+
+    button.og-disabled {
+        color: #bbb;
+        text-shadow: 0 1px 0 #fff;
+        cursor: default;
+    }
+
+/* Inline with form elements */
+
+    button.og-inline-form {
+        height: 20px;
+        line-height: 18px;
+        padding: 0;
+        margin: 0;
+    }

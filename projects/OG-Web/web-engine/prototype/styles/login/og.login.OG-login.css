@@ -1,0 +1,81 @@
+/*
+* Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+* Please see distribution for license.
+*/
+
+html {
+    background-color: #CDCDCD;
+    background-image: radial-gradient(circle closest-corner at center center, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)), radial-gradient(circle farthest-side at left top , rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), radial-gradient(circle farthest-side at right top , rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)), radial-gradient(circle closest-corner at 30% 80% , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), url("/prototype/images/common/furniture/background-noise-64x64.png");
+    height: 100%;
+}
+body {
+    color: #475562;
+    font: 12px/160% 'Open Sans',arial,serif;
+}
+body {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+button {
+    background: -moz-linear-gradient(center top , #F3F3F3 0%, #F3F3F3 50%, #EBEBEB 52%, #F3F3F3 100%) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border-color: #CCCCCC #999999 #999999 #CCCCCC !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    color: #555555;
+    cursor: pointer;
+    padding: 4px 8px;
+    vertical-align: middle;
+}
+.OG-login {
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top: -100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.OG-login table img {
+    width: 296px;
+    height: 58px;
+}
+
+.OG-login table {
+    position: relative;
+    left: 56px;
+}
+
+.OG-login td {
+    padding: 4px;
+}
+
+.OG-login input {
+    width: 250px;
+    height: 22px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.OG-login label {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 22px;
+    text-shadow: 0 1px 0 #fff;
+}
+.OG-login button {
+    margin: 2px 0 0 0;
+}
+.og-logo {
+    margin-left: 78px;
+}
+
+.og-login-error-text {
+   color: #FF0000;
+}
+.og-login-error-input{
+    border: 1px solid #FF0000;
+}

@@ -1,0 +1,15 @@
+/*
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+
+.OG-link-cancel {
+  border-bottom: 1px solid #ccc;
+  color: #999;
+  cursor: pointer;
+}
+
+.OG-link-cancel:hover {
+  border-bottom: 1px solid #999;
+  color: #999;
+}

@@ -1,0 +1,42 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <col style="width: 40%" />
+          <col style="width: 60%" />
+          <thead>
+            <tr>
+              <th><span><em>${securityType}</em></span></th><th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span>Expiry Date</span></td><td>${expirydate.datetime} - ${expirydate.timezone}</td></tr>
+            <tr><td><span>Expiry Accuracy</span></td><td>${expiryAccuracy}</td></tr>
+            <tr><td><span>Trading Exchange</span></td><td>${tradingExchange}</td></tr>
+            <tr><td><span>Settlement Exchange</span></td><td>${settlementExchange}</td></tr>
+            <tr><td><span>Currency</span></td><td>${currency}</td></tr>
+            <tr><td><span>Unit Amount</span></td><td>${unitAmount}</td></tr>
+            {{if underlyingId}}
+              <tr>
+                <td><span>Underlying Identifier</span></td>
+                <td class="OG-js-underlying-id">${underlyingId}</td>
+              </tr>
+            {{/if}}
+            {{if underlyingBond}}
+              <tr><td><span>First Delivery Date</span></td><td>${firstDeliveryDate}</td></tr>
+              <tr><td><span>Last Delivery Date</span></td><td>${lastDeliveryDate}</td></tr>
+              <tr><td style="vertical-align: top"><span>Underlying Bond</span></td><td>
+                {{each underlyingBond}}${$index}: ${$value} <br />{{/each}}
+              </td></tr>
+            {{/if}}
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      ${attributes}
+    </div>
+  </section>
+</article>

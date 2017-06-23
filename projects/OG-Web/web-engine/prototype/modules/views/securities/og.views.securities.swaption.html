@@ -1,0 +1,32 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <col style="width: 40%" />
+          <col style="width: 60%" />
+          <thead>
+            <tr>
+              <th><span><em>${securityType}</em></span></th><th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr><td><span>Currency</span></td><td>${currency}</td></tr>
+          <tr><td><span>Expiry</span></td><td>${expiry}</td></tr>
+          <tr><td><span>Is Cash Settled</span></td><td>${isCashSettled}</td></tr>
+          <tr><td><span>Is Long</span></td><td>${isLong}</td></tr>
+          <tr><td><span>Is Payer</span></td><td>${isPayer}</td></tr>
+          <tr>
+            <td><span>Underlying Identifier</span></td>
+            <td class="OG-js-underlying-id">${underlyingId}</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      ${attributes}
+    </div>
+  </section>
+</article>

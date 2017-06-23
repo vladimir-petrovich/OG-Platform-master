@@ -1,0 +1,41 @@
+.OG-layout-admin-container {
+    height: 100%;
+    visibility: hidden;
+}
+
+.OG-layout-masthead {
+    background: transparent;
+    z-index: 6!important;
+}
+
+.OG-layout-admin-search,
+.OG-layout-analytics-legacy { /* legacy analytics */
+    background: #fff;
+    border-top: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    position: relative;
+    overflow: hidden;
+}
+
+.OG-layout-admin-details-center,
+.OG-layout-admin-details-south {
+    background: #fff;
+    border-top: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    position: relative;
+    overflow: auto;
+}
+
+.OG-layout-admin-details-center .ui-layout-header { /* Keeps the header in the main section from jumping on load */
+    min-height: 74px;
+}
+
+.OG-layout-admin-details-center .ui-layout-header {
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 1px;
+}
+
+.OG-layout-admin-details-center .ui-layout-header header {
+    padding: 10px;
+}

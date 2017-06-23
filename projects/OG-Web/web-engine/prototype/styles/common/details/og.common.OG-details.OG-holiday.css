@@ -1,0 +1,38 @@
+/*
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+.OG-holiday .og-calendar {
+  margin: 10px 0;
+}
+
+.OG-holiday .og-pagination {
+  background: #ebebeb;
+  padding: 2px 4px 2px 5px;
+  position: relative;
+  height: 25px;
+  left: 495px;
+  width: 100px;
+  top: 0;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
+}
+
+.OG-holiday .og-pagination select {
+  width: 100px;
+  position: absolute;
+  top: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.OG-holiday .og-pagination a {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.OG-holiday .og-pagination a:hover {
+  background-color: transparent;
+  border: none;
+}

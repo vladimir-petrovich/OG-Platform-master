@@ -1,0 +1,11 @@
+/*
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+.OG-warning-message {
+  background: #fee;
+  color: #960505;
+  display: none;
+  margin-bottom: 10px;
+  padding: 5px
+}

@@ -1,0 +1,44 @@
+/*
+ * Common font styles
+ *
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ *
+ */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('/prototype/fonts/open-sans.ttf') format('truetype');
+}
+
+body {
+  color: #475562;
+  font: normal 12px/160% 'Open Sans', arial, serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  position: relative;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}

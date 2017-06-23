@@ -1,0 +1,53 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * 
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.option {
+
+  enum BarrierType {
+    UP;
+    DOWN;
+    DOUBLE;
+  }
+  
+  enum BarrierDirection {
+    KNOCK_IN;
+    KNOCK_OUT;
+  }
+  
+  enum MonitoringType {
+    CONTINUOUS;
+    DISCRETE;
+  }
+  
+  enum SamplingFrequency {
+    DAILY_CLOSE;
+    FRIDAY;
+    WEEKLY_CLOSE;
+  }
+ 
+  /**
+   * An FX barrier option security.
+   */
+  message FXBarrierOptionSecurity extends FinancialSecurity {
+    required string securityType [default = "FX_BARRIER_OPTION"];
+    
+    required com.opengamma.util.money.Currency putCurrency;
+    required com.opengamma.util.money.Currency callCurrency; 
+    required double putAmount;
+    required double callAmount;
+    required util.time.Expiry expiry;
+    required javax.time.calendar.ZonedDateTime settlementDate;
+    
+    required BarrierType barrierType;
+    required BarrierDirection barrierDirection;
+    required MonitoringType monitoringType;
+    required SamplingFrequency samplingFrequency;
+    
+    required double barrierLevel;
+    required boolean isLong;
+  }
+
+}

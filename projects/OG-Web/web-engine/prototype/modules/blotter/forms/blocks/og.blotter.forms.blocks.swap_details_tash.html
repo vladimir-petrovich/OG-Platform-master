@@ -1,0 +1,49 @@
+<section>
+  <table class="OG-table">
+    <colgroup>
+      <col style="width: 33%">              
+      <col style="width: 67%">              
+    </colgroup>
+    <thead>
+      <tr>
+        <th>
+          <span><em>Swap Details</em></span>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label>
+            <span>Effective Date</span>
+          </label>
+        </td>
+        <td>
+          <input class="blotter-date" name="{{prefix}}effectiveDate" type="text" value="{{effective}}"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            <span>Maturity Date</span>
+          </label>
+        </td>
+        <td>
+          <input class="blotter-date" name="{{prefix}}maturityDate" type="text" value="{{maturity}}"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>Notional</span>
+        </td>
+        <td class="og-double-cell">
+          <div><span><label><span>Exchange Initial
+          </span><input name="{{prefix}}exchangeInitialNotional" type="checkbox"/></label>
+          </span><span><label><span>Exchange Final
+          </span><input name="{{prefix}}exchangeFinalNotional" type="checkbox"/></label></span></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,23 @@
+/*
+ * Copyright 2012 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+.OG-icon.og-icon-delete:after {
+  background-position: -22px -9px;
+  background-color: transparent;
+  height: 6px;
+  width: 7px;
+  z-index: 2;
+  position: absolute;
+}
+
+.OG-icon.og-icon-delete:hover:after {
+  background-position: -11px -35px;
+  background-color: transparent;
+  height: 10px;
+  width: 11px;
+  z-index: 2;
+  position: absolute;
+  margin-top: -2px;
+  margin-left: -2px;
+}

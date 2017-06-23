@@ -1,0 +1,42 @@
+<div class="og-menu-toggle">
+  <div class="OG-icon og-icon-Temporal"></div>
+  <span>temporal</span>
+  <div class="OG-icon og-icon-down"></div>
+</div>
+<div class="OG-analytics-form-menu og-menu-temporal OG-shadow og-menu" style="display: none">
+  <fieldset class="valuation-time OG-background-03">
+    <p>Valuation Time</p>
+    <em>The time used by functions</em>
+    <label class="latest">
+        <input type="radio" name="valuation-time" value="Latest" {{#unless valuation}}checked{{/unless}}/> Latest
+    </label>
+    <label class="custom">
+        <input type="radio" name="valuation-time" value="Custom" {{#if valuation}}checked{{/if}}/> Custom
+    </label>
+    <input class="custom-date-time" type="text" name="valuation-time" value="{{valuation}}" />
+  </fieldset>
+  <fieldset class="portfolio-version">
+    <p>Portfolio Version Time</p>
+    <label class="latest">
+        <input type="radio" name="portfolio-version" value="Latest" {{#unless version}}checked{{/unless}}/> Latest
+    </label>
+    <label class="custom">
+        <input type="radio" name="portfolio-version" value="Custom" {{#if version}}checked{{/if}}/> Custom
+    </label>
+    <input class="custom-date-time" type="text" name="portfolio-version" value="{{version}}" />
+  </fieldset>
+  <fieldset class="portfolio-correction">
+    <p>Portfolio Correction Time</p>
+    <label class="latest">
+        <input type="radio" name="portfolio-correction" value="Latest" {{#unless correction}}checked{{/unless}}/> Latest
+    </label>
+    <label class="custom">
+        <input type="radio" name="portfolio-correction" value="Custom" {{#if correction}}checked{{/if}}/> Custom
+    </label>
+    <input class="custom-date-time" type="text" name="portfolio-correction" value="{{correction}}" />
+  </fieldset>
+  <fieldset class="temporal-datasources" style="display:none">
+    <p>Data sources</p>
+    <em>You have set the following temporal values for your data sources:</em>
+  </fieldset>
+</div>

@@ -1,0 +1,21 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.future {
+
+  /**
+   * An equity future security.
+   */
+  message EquityFutureSecurity extends FutureSecurity {
+    required javax.time.calendar.ZonedDateTime settlementDate;  
+    required id.ExternalId underlyingIdentifier; 
+  }
+
+  message EquityIndexDividendFutureSecurity extends EquityFutureSecurity {
+    // No additional fields
+  }
+
+}

@@ -1,0 +1,23 @@
+/*
+ * Common link styles
+ *
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  border-bottom: 1px solid #bed4e3;
+  color: #487287;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+  border-bottom: 1px solid #61d050;
+  color: #61d050;
+}

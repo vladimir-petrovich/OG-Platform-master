@@ -1,0 +1,73 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <thead>
+            <tr><th colspan="6"><span><em>${securityType.lang()}</em></span></th></tr>
+            <tr>
+              <th><em>Factor Type</em></th>
+              <th><em>Factor Name</em></th>
+              <th><em>Node</em></th>
+              <th><em>Price</em></th>
+              <th><em>Exposure</em></th>
+              <th><em>Convexity</em></th>
+            </tr>
+          </thead>
+          <tbody>
+          {{if factors.length}}
+            {{each(factor_index, factor) factors}}
+            <tr>
+              <td><span>${factor.factorType}</span></td>
+              <td><span>${factor.factorName}</span></td>
+              <td><span>{{if factor.node}}${factor.node}{{else}}(no vaule){{/if}}</span></td>
+              {{if factor.priceTsId}}
+                <td><span><a class="og-js-live-anchor" href="{{html
+                  og.common.routes.prefix() +
+                    og.common.routes.hash(og.views.securities.rules.load_item, og.common.routes.current().args, {
+                      add: {timeseries: factor.priceTsId}
+                    })}}">
+                    ${factor.lastPrice || 'timeseries'}</a>
+                </span></td>
+              {{else}}
+                <td><span>{{html factor.lastPrice || ''.lang()}}</span></td>
+              {{/if}}
+              {{if factor.exposureTsId}}
+                <td><span><a class="og-js-live-anchor" href="{{html
+                  og.common.routes.prefix() +
+                    og.common.routes.hash(og.views.securities.rules.load_item, og.common.routes.current().args, {
+                      add: {timeseries: factor.exposureTsId}
+                    })}}">
+                    ${factor.lastExposure || 'timeseries'}</a>
+                </span></td>
+              {{else}}
+                <td><span>{{html factor.lastExposure || ''.lang()}}</span></td>
+              {{/if}}
+              {{if factor.convexityTsId}}
+                <td><span><a class="og-js-live-anchor" href="{{html
+                  og.common.routes.prefix() +
+                    og.common.routes.hash(og.views.securities.rules.load_item, og.common.routes.current().args, {
+                      add: {timeseries: factor.convexityTsId}
+                    })}}">
+                    ${factor.lastConvexity || 'timeseries'}</a>
+                </span></td>
+              {{else}}
+                <td><span>{{html factor.lastConvexity || ''.lang()}}</span></td>
+              {{/if}}
+            </tr>
+            {{/each}}
+          {{else}}
+            <tr>
+              <td colspan="6"><span>(no values)</span></td>
+            </tr>
+          {{/if}}
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      ${attributes}
+    </div>
+  </section>
+</article>

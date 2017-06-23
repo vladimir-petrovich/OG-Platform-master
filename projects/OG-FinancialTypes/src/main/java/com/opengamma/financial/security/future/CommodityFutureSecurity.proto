@@ -1,0 +1,38 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+ 
+namespace com.opengamma.financial.security.future {
+
+  /**
+   * Base for a commodity future.
+   */
+  abstract message CommodityFutureSecurity extends FutureSecurity {    
+    optional double unitNumber;
+    optional string unitName;
+  }
+
+  /**
+   * An agriculture future security.
+   */
+  message AgricultureFutureSecurity extends CommodityFutureSecurity {
+    // No additional fields
+  }
+
+  /**
+   * An energy future security.
+   */
+  message EnergyFutureSecurity extends CommodityFutureSecurity {
+    optional id.ExternalId underlyingIdentifier;
+  }
+
+  /**
+   * A metal future security.
+   */
+  message MetalFutureSecurity extends CommodityFutureSecurity {
+    optional id.ExternalId underlyingIdentifier;
+  }
+
+}

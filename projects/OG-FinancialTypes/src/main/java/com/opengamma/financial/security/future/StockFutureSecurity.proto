@@ -1,0 +1,16 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.future {
+
+  /**
+   * A stock future security.
+   */
+  message StockFutureSecurity extends FutureSecurity {
+    optional id.ExternalId underlyingIdentifier;
+  }
+
+}

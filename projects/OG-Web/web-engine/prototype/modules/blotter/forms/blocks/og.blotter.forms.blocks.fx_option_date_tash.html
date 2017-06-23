@@ -1,0 +1,49 @@
+<table class="OG-table">
+  <colgroup>
+    <col style="width: 33%">
+    <col style="width: 67%">
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>
+        <label>
+          <span>Expiry Date</span>
+        </label>
+      </td>
+      <td>
+        <input class="blotter-date" name="security.expiry" type="text" value="{{expiry}}"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>
+          <span>{{#if fxoption}}Exercise Type{{/if}}{{#if digital}}Payment Currency{{/if}}</span>
+        </label>
+      </td>
+      <td>
+        {{{item_0}}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          <span>Settlement Date</span>
+        </label>
+      </td>
+      <td>
+        <input class="blotter-date" name="security.settlementDate" type="text" value="{{settlement}}"/>
+      </td>
+    </tr>
+    {{#if nondev}}
+      <tr>
+        <td>
+        </td>
+        <td>
+          <div><input name="security.deliveryInCallCurrency" type="checkbox" /><span>Deliver In Call Currency</span>
+          </div>
+        </td>
+      </tr>
+    {{/if}}
+  </tbody>
+</table>

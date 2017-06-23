@@ -1,0 +1,19 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+ 
+namespace com.opengamma.financial.security.cash {
+
+  message CashSecurity extends FinancialSecurity {
+    required string securityType [default="CASH"];
+    
+    required com.opengamma.util.money.Currency currency;
+    required id.ExternalId region;
+    required javax.time.calendar.ZonedDateTime maturity;
+    required double rate;
+    required double amount;
+  }
+
+}

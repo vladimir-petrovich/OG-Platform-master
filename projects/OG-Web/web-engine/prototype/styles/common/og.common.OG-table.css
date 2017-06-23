@@ -1,0 +1,202 @@
+/*
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+.OG-table {
+    width: 100%;
+    position: relative;
+    margin-top: 2px;
+}
+
+.OG-table:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.OG-table td {
+    padding: 4px;
+    background-color: #ecf5fa;
+    position: relative;
+}
+
+.OG-table th:last-child,
+.OG-table td:last-child {
+    padding-right: 0;
+}
+
+.OG-table td:first-child {
+    padding-left: 10px;
+}
+
+.OG-table th {
+    color: #555;
+    text-align: left;
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+.OG-table tr:nth-child(2) th {
+    padding: 0;
+}
+
+.OG-table tr:nth-child(2) th div {
+    padding: 4px 0;
+}
+
+.OG-table th em {
+    font-style: normal;
+    z-index: 2;
+    position: relative;
+}
+
+.OG-table thead span {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    padding: 6px 10px 6px 8px;
+    border: 1px solid #d8d8d8;
+    color: #555;
+    text-shadow: 0px 1px 0px #fff;
+    background-color: #eee;
+    border-radius: 1px;
+    position: relative;
+}
+
+.OG-table thead span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    background: #fafafa;
+}
+
+.OG-table thead span * {
+    position: relative;
+    font-style: normal;
+    z-index: 2;
+}
+
+.OG-table thead tr th {
+    white-space: nowrap;
+    border-bottom: 2px solid #fff;
+}
+
+.OG-table tbody td {
+    vertical-align: top;
+}
+
+.OG-table thead tr:last-child th div {
+    position: relative;
+}
+
+.OG-table thead tr:last-child th div:after {
+    display: block;
+    content: '';
+    background: #dfecf5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    position: absolute;
+}
+
+.OG-table thead tr:first-child th:after {
+    content: none;
+}
+
+.OG-table thead tr {
+  /**
+    * 1000
+    * 0100
+    * 0010
+    * 0001
+    * 1=d0d0d1, 0=ecf5fa
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHElEQVQIW2N4+uz5p89fIIgBiOF8EAfOh3IgfACRGCz1+ENhswAAAABJRU5ErkJggg==)
+    */
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHElEQVQIW2O4cOHim6+/IIgBiOF8EAfOh3IgfAB4lCwJ2HzdqwAAAABJRU5ErkJggg==);
+}
+
+
+/* Second level header support */
+
+    .OG-table thead tr + tr {
+        background: #d7e7f2;
+        border-top: 2px solid #fff;
+    }
+
+    .OG-table thead tr + tr th:first-child div {
+        padding-left: 10px;
+    }
+
+    .OG-table thead tr + tr th:last-child {
+      border-right: none;
+    }
+
+
+/* Sub list content */
+
+    .OG-table .og-sub-list {
+        width: 100%;
+    }
+
+    .OG-table .og-sub-list td {
+        background-color: inherit;
+    }
+
+    .OG-table .og-sub-list tr td:first-child {
+        color: #999;
+    }
+
+    .OG-table .og-sub-list .og-header {
+        background-color: #fafcfe;
+        border-top: 1px solid #d0e4f1;
+        border-bottom: 1px solid #d0e4f1;
+        color: inherit!important;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+/* Extras */
+
+    .OG-table .og-divider td {
+        background-color: #fff;
+        height: 2px;
+        padding: 0;
+    }
+
+/* Delete row */
+
+    .OG-table .og-del {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .OG-table .og-del {
+        background: url('/prototype/images/common/sprites/main-sprite-sheet.png');
+        background-position: -22px  -9px;
+        height: 6px;
+        margin-top: 5px;
+        width: 7px;
+        position: absolute;
+        right: 10px;
+        z-index: 1;
+    }
+
+    .OG-table .og-del:hover {
+        background-position: -11px -35px;
+        width: 11px;
+        height: 10px;
+        margin-top: 3px;
+        right: 8px;
+    }
+
+/* Tablesorter */
+.OG-table.og-tablesorter tr:last-child th {
+    cursor: pointer;
+}

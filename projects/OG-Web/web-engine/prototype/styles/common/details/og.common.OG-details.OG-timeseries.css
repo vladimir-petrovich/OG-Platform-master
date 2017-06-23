@@ -1,0 +1,319 @@
+/**
+ * Copyright 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * Please see distribution for license.
+ */
+
+.OG-gadget-timeseries .og-menu {
+    position: absolute;
+    top: -1px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    padding: 8px;
+    color: #555;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 1px;
+    z-index: 4;
+    left: 0;
+}
+
+.OG-gadget-timeseries .og-menu .og-field {
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    margin-right: 5px;
+}
+
+.OG-gadget-timeseries .og-menu select {
+    margin: 0;
+    min-width: 100px;
+}
+
+.OG-gadget-timeseries .og-menu .og-observation {
+    height: 17px;
+    position: relative;
+    z-index: 2;
+    margin-top: 3px;
+    display: inline-block;
+    text-shadow: none;
+}
+
+.OG-gadget-timeseries .og-menu .og-observation label {
+    height: 19px;
+    position: relative;
+    display: inline-block;
+    line-height: 18px;
+    padding-right: 4px;
+    margin-right: 4px;
+}
+
+.OG-gadget-timeseries .og-menu .og-observation input {
+    left: -1px;
+    position: absolute;
+}
+
+.OG-gadget-timeseries .og-menu .og-observation span {
+    font-size: 10px;
+    padding-left: 19px;
+    position: relative;
+}
+
+/* Timeseries (og.views.gadgets.timeseries.plot_tash) */
+
+.OG-timeseries .og-flot-top {
+    height: 27px;
+    position: relative;
+    right: 0;
+    margin-bottom: 2px;
+}
+
+.OG-timeseries .og-tenor {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    padding: 7px 3px 5px 8px;
+    color: #555;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 1px;
+    z-index: 3;
+}
+
+.OG-timeseries .og-tenor .OG-link-active {
+    color: #555;
+}
+
+.OG-timeseries .og-tenor:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 1px;
+    top: 3px;
+    bottom: 0;
+    background: #fff;
+}
+
+.OG-timeseries .og-tenor span {
+    z-index: 2;
+    position: relative;
+}
+
+/* Plots */
+
+.OG-timeseries .og-plots {
+    top: 0;
+    background-color: #fff;
+    visibility: hidden;
+    border: 1px solid #6f839e;
+}
+
+.OG-timeseries .og-timeseries-plot {
+    position: relative;
+}
+
+.OG-timeseries .og-js-p1 {
+    left: 0;
+    position: relative;
+    overflow: hidden;
+    height: 270px;
+    width: 882px;
+    position: relative;
+    top: 0;
+}
+
+.OG-timeseries .og-js-p2 {
+    position: relative;
+    height: 50px;
+    width: 882px;
+    position: relative;
+}
+
+/* Plot furniture */
+
+.OG-timeseries .og-flot-xaxis {
+    height: 1px;
+    width: 798px;
+    position: relative;
+    background: #6d7d91;
+}
+
+.OG-timeseries .og-flot-xaxis:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    opacity: .1;
+}
+
+/**
+  * 1000
+  * 0100
+  * 0010
+  * 0001
+  * 0=8395ac, 1=7689a3
+  */
+.OG-timeseries .og-js-p2-background {
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, 0.15);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJ0lEQVQIW2Ms61z8n5eHkwEGGJunrvn/+ct3BpggWAAkCxOEC8AEAY3UE+/WxCiTAAAAAElFTkSuQmCC);
+}
+
+/* Data points */
+
+.OG-timeseries .og-data {
+    overflow: hidden;
+    overflow-x: auto;
+    display: block;
+    position: relative;
+    margin-top: 0;
+}
+
+.OG-timeseries .og-data time {
+    color: #555;
+}
+
+.OG-timeseries .og-data time span {
+    color: #999;
+}
+
+.OG-timeseries .og-container {
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    overflow-x: auto;
+    background-color: #fff;
+}
+
+.OG-timeseries .og-container > div {
+    display: inline-block;
+}
+
+.OG-timeseries .og-data-series {
+    width: 399px;
+    display: inline-block;
+    float: left;
+}
+
+.OG-timeseries .og-data-series:last-child {
+    border-right: none;
+}
+
+.OG-timeseries .og-data-series header {
+    height: 0;
+    display: block;
+    position: relative;
+    border-top: 1px solid #fff;
+}
+
+.OG-timeseries .og-data-series footer {
+    position: relative;
+    display: block;
+    padding: 5px 5px 5px 0;
+}
+
+.OG-timeseries .og-data-series header h3 {
+    display: inline-block;
+    top: -1px;
+    left: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 22px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid #D8D8D8;
+    color: #555;
+    text-shadow: 0 1px 0 white;
+    background-color: #EEE;
+    border-radius: 1px;
+}
+
+.OG-timeseries .og-data-series header h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    background: #fafafa;
+}
+
+.OG-timeseries .og-data-series header h3 span {
+    position: relative;
+    z-index: 2;
+    top: 0;
+}
+
+.OG-timeseries .og-data-series header span {
+    position: relative;
+    top: 7px;
+}
+
+.OG-timeseries .og-data button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #57ba48;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.og-data .og-data-item {
+    border-top:  1px solid #fff;
+    height: 281px;
+}
+
+.og-data .og-data-item .og-loading {
+    display: inline-block;
+    padding: 5px;
+    color: #999;
+    margin-top: 0;
+}
+
+.OG-timeseries .og-checking-related {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    color: #ccc;
+}
+
+/**
+ * Legend
+ */
+.OG-timeseries .legend {
+    opacity: 0.7;
+    position: absolute;
+    top: 13px;
+    width: 155px;
+    background-color: #000;
+    padding: 2px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+}
+
+.OG-timeseries .legend div,
+.OG-timeseries .legend table {
+    color: #fff!important;
+    font-size: 12px!important;
+}
+
+.OG-timeseries .legend .og-date {
+    top: 2px!important;
+}
+
+.OG-timeseries .legend table {
+    top: 20px!important;
+}
+
+.og-timeseries-refresh {
+    display: none;
+    margin: 10px 0 0 15px;
+    position: absolute;
+    top: 0;
+}

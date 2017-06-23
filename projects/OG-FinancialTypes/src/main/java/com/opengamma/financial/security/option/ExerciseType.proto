@@ -1,0 +1,24 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ * 
+ * Please see distribution for license.
+ */
+ 
+namespace com.opengamma.financial.security.option {
+
+  abstract message ExerciseType {
+  }
+
+  message AmericanExerciseType extends ExerciseType {
+  }
+
+  message AsianExerciseType extends ExerciseType {
+  }
+
+  message BermudanExerciseType extends ExerciseType {
+  }
+
+  message EuropeanExerciseType extends ExerciseType {
+  }
+
+}

@@ -1,0 +1,44 @@
+/**
+ * Copyright (C) 2009 - present by OpenGamma Inc. and the OpenGamma group of companies
+ *
+ * Please see distribution for license.
+ */
+
+namespace com.opengamma.financial.security.swap {
+
+  /**
+   * An abstract base for one leg of a swap.
+   */
+  abstract message SwapLeg {
+    required readonly com.opengamma.financial.convention.daycount.DayCount dayCount;
+    required readonly com.opengamma.financial.convention.frequency.Frequency frequency;
+    required readonly id.ExternalId regionIdentifier;
+    required readonly com.opengamma.financial.convention.businessday.BusinessDayConvention businessDayConvention;
+    required readonly Notional notional;
+    required readonly boolean isEOM;
+  }
+
+  /**
+   * An interest rate based leg of a swap.
+   */
+  abstract message InterestRateLeg extends SwapLeg {
+  }
+
+  /**FloatingInterestRateLeg.java
+   * A fixed interest rate leg of a swap.
+   */
+  message FixedInterestRateLeg extends InterestRateLeg {
+    required readonly double rate;
+  }
+
+  /**
+   * A floating interest rate leg of a swap.
+   */
+  message FloatingInterestRateLeg extends InterestRateLeg {
+    required readonly id.ExternalId floatingReferenceRateIdentifier;
+    optional readonly double initialFloatingRate;
+    required readonly double spread;
+    required readonly FloatingRateType floatingRateType;
+  }
+
+}

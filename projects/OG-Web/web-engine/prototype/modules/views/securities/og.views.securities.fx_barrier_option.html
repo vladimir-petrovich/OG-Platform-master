@@ -1,0 +1,35 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <col style="width: 40%" />
+          <col style="width: 60%" />
+          <thead>
+            <tr>
+              <th><span><em>${securityType.lang()}</em></span></th><th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span>Barrier Direction</span></td><td>${barrierDirection}</td></tr>
+            <tr><td><span>Barrier Level</span></td><td>${barrierLevel}</td></tr>
+            <tr><td><span>Barrier Type</span></td><td>${barrierType}</td></tr>
+            <tr><td><span>Call Amount</span></td><td>${callAmount}</td></tr>
+            <tr><td><span>Call Currency</span></td><td>${callCurrency}</td></tr>
+            <tr><td><span>Put Currency</span></td><td>${putCurrency}</td></tr>
+            <tr><td><span>Expiry</span></td><td>${expiry}</td></tr>
+            <tr><td><span>Is Long</span></td><td>${isLong}</td></tr>
+            <tr><td><span>Monitoring Type</span></td><td>${monitoringType}</td></tr>
+            <tr><td><span>Put Amount</span></td><td>${putAmount}</td></tr>
+            <tr><td><span>Sampling Frequency</span></td><td>${samplingFrequency}</td></tr>
+            <tr><td><span>Settlement Date</span></td><td>${settlementDate}</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      ${attributes}
+    </div>
+  </section>
+</article>

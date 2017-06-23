@@ -1,0 +1,18 @@
+{
+    "template_data": {
+        "name": "50 x APPLE INC",
+        "object_id": "MemPos~1",
+        "security_name": "APPLE INC",
+        "security_unique_id": "Mock~1",
+        "security_type": "EQUITY",
+        "quantity": "50"
+    },
+    "securities": [
+        {
+            "scheme": "BLOOMBERG_TICKER",
+            "value": "AAPL US Equity"
+        }
+    ],
+    "attributes": { },
+    "xml":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<bean type=\"com.opengamma.master.position.ManageablePosition\">\n <uniqueId>MemPos~1<\/uniqueId>\n <quantity>50<\/quantity>\n <securityLink>\n  <externalId>\n   <externalIds>\n    <item>BLOOMBERG_TICKER~AAPL US Equity<\/item>\n   <\/externalIds>\n  <\/externalId>\n <\/securityLink>\n <trades\/>\n <attributes\/>\n<\/bean>\n"
+}

@@ -1,0 +1,88 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <col style="width: 40%" />
+          <col style="width: 60%" />
+          <thead>
+            <tr>
+              <th><span><em>${securityType.lang()}</em></span></th><th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span>Currency</span></td><td><span>${currency}</span></td></tr>
+            <tr><td><span>Maturity Date</span></td><td><span>${maturityDate}</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      <section>
+        <table class="OG-table">
+          <thead>
+          <tr><th colspan="6"><span><em>Risk Factors</em></span></th></tr>
+          <tr>
+              <th><div><em>Factor Type</em></div></th>
+              <th><div><em>Factor Name</em></div></th>
+              <th><div><em>Node</em></div></th>
+              <th><div><em>Price</em></div></th>
+              <th><div><em>Exposure</em></div></th>
+              <th><div><em>Convexity</em></div></th>
+            </tr>
+          </thead>
+          <tbody>
+          {{if factors.length}}
+            {{each(factor_index, factor) factors}}
+            <tr>
+              <td><span>${factor.factorType}</span></td>
+              <td><span>${factor.factorName}</span></td>
+              <td><span>{{if factor.node}}${factor.node}{{else}}(no value){{/if}}</span></td>
+              {{if factor.priceTsId}}
+                <td><span><a class="og-js-live-anchor" href="{{html
+                  og.common.routes.prefix() +
+                    og.common.routes.hash(og.views.securities.rules.load_item, og.common.routes.current().args, {
+                      add: {timeseries: factor.priceTsId}
+                    })}}">
+                    ${factor.lastPrice || 'timeseries'}</a>
+                </span></td>
+              {{else}}
+                <td><span>{{html factor.lastPrice || ''.lang()}}</span></td>
+              {{/if}}
+              {{if factor.exposureTsId}}
+                <td><span><a class="og-js-live-anchor" href="{{html
+                  og.common.routes.prefix() +
+                    og.common.routes.hash(og.views.securities.rules.load_item, og.common.routes.current().args, {
+                      add: {timeseries: factor.exposureTsId}
+                    })}}">
+                    ${factor.lastExposure || 'timeseries'}</a>
+                </span></td>
+              {{else}}
+                <td><span>{{html factor.lastExposure || ''.lang()}}</span></td>
+              {{/if}}
+              {{if factor.convexityTsId}}
+                <td><span><a class="og-js-live-anchor" href="{{html
+                  og.common.routes.prefix() +
+                    og.common.routes.hash(og.views.securities.rules.load_item, og.common.routes.current().args, {
+                      add: {timeseries: factor.convexityTsId}
+                    })}}">
+                    ${factor.lastConvexity || 'timeseries'}</a>
+                </span></td>
+              {{else}}
+                <td><span>{{html factor.lastConvexity || ''.lang()}}</span></td>
+              {{/if}}
+            </tr>
+            {{/each}}
+          {{else}}
+            <tr>
+              <td colspan="6"><span>(no values)</span></td>
+            </tr>
+          {{/if}}
+          </tbody>
+        </table>
+      </section>
+      ${attributes}
+    </div>
+  </section>
+</article>

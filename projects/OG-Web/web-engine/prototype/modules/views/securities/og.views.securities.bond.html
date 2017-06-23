@@ -1,0 +1,69 @@
+<article>
+  ${header}
+  <section>
+    <div class="OG-details-content OG-js-details-panel">
+      <section class="og-js-identifiers"></section>
+      <section>
+        <table class="OG-table">
+          <col style="width: 40%" />
+          <col style="width: 60%" />
+          <thead>
+            <tr>
+              <th><span><em>${securityType}</em></span></th><th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span>Issuer name</span></td><td>${issuerName}</td></tr>
+            <tr><td><span>Issuer Type</span></td><td>${issuerType}</td></tr>
+            <tr><td><span>Issuer Domicile</span></td><td>${issuerDomicile}</td></tr>
+            <tr class="og-divider"><td></td><td></td></tr>
+            <tr><td><span>Market</span></td><td>${market}</td></tr>
+            <tr><td><span>Currency</span></td><td>${currency}</td></tr>
+            <tr><td><span>Yield convention</span></td><td>${yieldConvention}</td></tr>
+            <tr class="og-divider"><td></td><td></td></tr>
+            <tr><td><span>Last Trade Date</span></td><td>${lastTradeDate}</td></tr>
+            <tr><td><span>Last Trade Accuracy</span></td><td>${lastTradeAccuracy}</td></tr>
+            <tr class="og-divider"><td></td><td></td></tr>
+            <tr><td><span>Coupon Type</span></td><td>${couponType}</td></tr>
+            <tr><td><span>Coupon Rate</span></td><td>${couponRate}</td></tr>
+            <tr><td><span>Coupon Frequency</span></td><td>${couponFrequency}</td></tr>
+            <tr class="og-divider"><td></td><td></td></tr>
+            <tr><td><span>Day Count</span></td><td>${dayCount}</td></tr>
+            <tr>
+              <td><span>Guarantee Type</span></td>
+              <td>{{if guaranteeType}}${guaranteeType}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr>
+              <td><span>Business Day Convention</span></td>
+              <td>{{if businessDayConvention}}${businessDayConvention}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr><td><span>Announcement Date</span></td><td>${announcementDate}</td></tr>
+            <tr>
+              <td><span>Interest Accrual Date</span></td>
+              <td>{{if interestAccrualDate}}${interestAccrualDate.date} - ${interestAccrualDate.zone}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr>
+                <td><span>Settlement Date</span></td>
+                <td>{{if settlementDate}}${settlementDate.date} - ${settlementDate.zone}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr>
+                <td><span>First Coupon Date</span></td>
+                <td>{{if firstCouponDate}}${firstCouponDate.date} - ${firstCouponDate.zone}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr>
+                <td><span>Issuance Price</span></td>
+                <td>{{if issuancePrice}}${issuancePrice.date} - ${issuancePrice.zone}{{else}}(no value){{/if}}</td>
+            </tr>
+            <tr><td><span>Total Amount Issued</span></td><td>${totalAmountIssued}</td></tr>
+            <tr><td><span>Minimum Amount</span></td><td>${minimumAmount}</td></tr>
+            <tr><td><span>Minimum Increment</span></td><td>${minimumIncrement}</td></tr>
+            <tr><td><span>Par Amount</span></td><td>${parAmount}</td></tr>
+            <tr><td><span>Redemption Value</span></td><td>${redemptionValue}</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="OG-timeseries-container"></section>
+      ${attributes}
+    </div>
+  </section>
+</article>
